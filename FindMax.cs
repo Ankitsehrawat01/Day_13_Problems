@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace Day_13_Practice_Problem
 {
-    public class FindMax
+    public class FindMax<T> where T : IComparable
     {
-        public T FindMx<T>(T First, T Second, T Third) where T : IComparable
+        public T First, Second, Third;
+        public FindMax(T First, T Second, T Third)
+        {
+            this.First = First;
+            this.Second = Second;
+            this.Third = Third;
+        }
+        public T FindMx()
         {
             if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
             {
