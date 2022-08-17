@@ -8,7 +8,7 @@ namespace Day_13_Practice_Problem
 {
     public class FindMax
     {
-        public int FindMxInteger(int First, int Second, int Third)
+        public T FindMx<T>(T First, T Second, T Third) where T : IComparable
         {
             if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
             {
@@ -22,40 +22,7 @@ namespace Day_13_Practice_Problem
             {
                 return Third;
             }
-            return 0;
-        }
-        public float FindMxFloat(float First, float Second, float Third)
-        {
-            if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
-            {
-                return First;
-            }
-            if (Second.CompareTo(Third) > 0 && Second.CompareTo(First) > 0)
-            {
-                return Second;
-            }
-            if (Third.CompareTo(First) > 0 && Third.CompareTo(Second) > 0)
-            {
-                return Third;
-            }
-            return 0;
-        }
-        public string FindMxString(string First, string Second, string Third)
-        {
-            if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
-            {
-                return First;
-            }
-            if (Second.CompareTo(Third) > 0 && Second.CompareTo(First) > 0)
-            {
-                return Second;
-            }
-            if (Third.CompareTo(First) > 0 && Third.CompareTo(Second) > 0)
-            {
-                return Third;
-            }
-            return null;
-
+            return default;
         }
     }
 }

@@ -15,21 +15,21 @@ namespace Day_13_Practice_Problem
                 switch (option)
                 {
                     case 1:
-                        int result = obj1.FindMxInteger(4, 3, 2);
+                        int result = obj1.FindMx<int>(4, 3, 2);
                         Console.WriteLine(result);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Maximum Number is:" + result);// To display Maximum Number
                         Console.WriteLine("-----------------------------------");
                         break;
                     case 2:
-                        float result2 = obj1.FindMxFloat(4.3f, 3.5f, 2.5f);
+                        float result2 = obj1.FindMx<float>(4.3f, 3.5f, 2.5f);
                         Console.WriteLine(result2);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Maximum float is:" + result2);// To display Maximum float
                         Console.WriteLine("-----------------------------------");
                         break;
                     case 3:
-                        string result3 = obj1.FindMxString("A", "B", "C");
+                        string result3 = obj1.FindMx<string>("A", "B", "C");
                         Console.WriteLine(result3);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Maximum string is:" + result3);// To display Maximum string
