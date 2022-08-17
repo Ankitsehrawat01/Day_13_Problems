@@ -40,6 +40,22 @@ namespace Day_13_Practice_Problem
             }
             return 0;
         }
+        public string FindMxString(string First, string Second, string Third)
+        {
+            if (First.CompareTo(Second) > 0 && First.CompareTo(Third) > 0)
+            {
+                return First;
+            }
+            if (Second.CompareTo(Third) > 0 && Second.CompareTo(First) > 0)
+            {
+                return Second;
+            }
+            if (Third.CompareTo(First) > 0 && Third.CompareTo(Second) > 0)
+            {
+                return Third;
+            }
+            return null;
 
+        }
     }
 }
