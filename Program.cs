@@ -6,7 +6,6 @@ namespace Day_13_Practice_Problem
         public static void Main(string[] args)
         {
             bool check = true;
-            FindMax obj1 = new FindMax();
             while (check)
             {
                 Console.Write("Select Option:\n" +
@@ -15,32 +14,30 @@ namespace Day_13_Practice_Problem
                 switch (option)
                 {
                     case 1:
-                        int result = obj1.FindMx<int>(4, 3, 2);
+                        FindMax<int> obj1 = new FindMax<int>(4, 3, 2);
+                        int result = obj1.FindMx();
                         Console.WriteLine(result);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Maximum Number is:" + result);// To display Maximum Number
                         Console.WriteLine("-----------------------------------");
                         break;
                     case 2:
-                        float result2 = obj1.FindMx<float>(4.3f, 3.5f, 2.5f);
+                        FindMax<float> obj2 = new FindMax<float>(4.3f, 3.5f, 2.5f);
+                        float result2 = obj2.FindMx();
                         Console.WriteLine(result2);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Maximum float is:" + result2);// To display Maximum float
                         Console.WriteLine("-----------------------------------");
                         break;
                     case 3:
-                        string result3 = obj1.FindMx<string>("A", "B", "C");
+                        FindMax<string> obj3 = new FindMax<string>("A", "B", "C");
+                        string result3 = obj3.FindMx();
                         Console.WriteLine(result3);
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine("Maximum string is:" + result3);// To display Maximum string
                         Console.WriteLine("-----------------------------------");
                         break;
-
-                    default:
-                        check = !check;
-                        break;
                 }
-            
             }
         }
     }
