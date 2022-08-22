@@ -9,10 +9,12 @@ namespace Day_13_Practice_Problem
             while (check)
             {
                 Console.Write("Select Option:\n" +
-                    "1)Find Integer Maximum Number\n" + 
-                    "2)Find float Maximum Number\n" + 
-                    "3)Find Maximum String\n" + 
-                    "4)Find Maximum using sort Method\n");
+                    "1) Find Integer Maximum Number\n" + 
+                    "2) Find float Maximum Number\n" + 
+                    "3) Find Maximum String\n" + 
+                    "4) Find Maximum integer using sort Method\n" +
+                    "5) Find Maximum float using sort Method\n" +
+                    "6) Find Maximum string using sort Method\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -43,16 +45,20 @@ namespace Day_13_Practice_Problem
                     case 4:
                         //for integer
                         int[] intArray = { 12, 15, 17, 13, 14, 19, 222 };
-                        Maximum obj = new Maximum(intArray);
+                        Maximum<int> obj = new Maximum<int>(intArray);
                         obj.PrintMaxValue();
+                        break;
+                    case 5:
                         //for float
                         float[] floatArray = { 12.2f, 15.4f, 17.1f, 13.9f };
-                        Maximum obj4 = new Maximum(floatArray);
-                        obj4.PrintMaxValue1();
+                        Maximum<float> obj4 = new Maximum<float>(floatArray);
+                        obj4.PrintMaxValue();
+                        break;
+                    case 6:
                         //for string
                         string[] stringArray = { "a", "b", "c", "d", "e" };
-                        Maximum obj5 = new Maximum(stringArray);
-                        obj5.PrintMaxValue2();
+                        Maximum<string> obj5 = new Maximum<string>(stringArray);
+                        obj5.PrintMaxValue();
                         break;
                 }
             }
